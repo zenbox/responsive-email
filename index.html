@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Not in Webclients, i.e. web.de -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background-color: hsla(0, 0%, 0%, 0.85);
+        }
+    </style>
+</head>
+<!-- /Not in Webclients -->
+
+<body>
+
+    <!-- In webclients only -->
+    <div id="kwsoft_myCustomer">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&display=swap');
+
+            #kwsoft_myCustomer,
+            #kwsoft_myCustomer * {
+                /* Box model? */
+                box-sizing: border-box;
+
+                /* Mini reset */
+                margin: 0;
+                padding: 0;
+            }
+
+
+            #kwsoft_myCustomer {
+                /* black, #000000, rgba(0, 0, 0, 1) */
+                color: hsla(0, 0%, 0%, 0.85);
+                background-color: hsla(0, 0%, 100%, 0.85);
+
+                /* Typography */
+                font-family: Barlow, Calibri, Arial, sans-serif;
+                font-size: 18px;
+                line-height: 1.4;
+
+                /* Layout */
+                padding: 1em;
+            }
+
+            #kwsoft_myCustomer h2 {
+                font-size: 2.2em;
+                font-weight: 300;
+
+            }
+
+            /* p { margin: 0;} */
+
+            /* Responsive layout*/
+            @media print {}
+
+            @media all {}
+
+            /* All devices fallback, i.e. Outlook (old)*/
+            @media screen {}
+
+            /* Small devices */
+            @media only screen and (max-width:649px) {
+                .kwsoft-teaser-box>div {
+                    column-count: 1;
+                }
+            }
+
+            /* Medium devices */
+            @media only screen and (min-width:650px) {
+                .kwsoft-teaser-box>div {
+                    column-count: 2;
+                }
+            }
+
+            /* General classes */
+            .kwsoft-img-responsive {
+                width: 100%;
+                height: auto;
+            }
+
+            .kwsoft-one-column-only {
+                column-count: 1 !important;
+            }
+        </style>
+
+
+        <!-- Don't use h1 for emails -->
+        <div class="kwsoft-teaser-box" style="display:block;">
+            <h2>Hello World and a lot more words</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                    similique tenetur vel magnam. Accusamus quia neque explicabo
+                    possimus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                    similique tenetur vel magnam. Accusamus quia neque explicabo
+                    possimus.</p>
+            </div>
+
+            <div class="kwsoft-one-column-only"
+                style="column-count: 1; margin: 0 -1em;">
+                <img width="650" height="200"
+                    src="https://picsum.photos/id/7/650/200" alt=""
+                    class="kwsoft-img-responsive">
+            </div>
+
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                    similique tenetur vel magnam. Accusamus quia neque explicabo
+                    possimus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                    similique tenetur vel magnam. Accusamus quia neque explicabo
+                    possimus.</p>
+            </div>
+        </div>
+
+
+
+        <!-- /In webclients only -->
+        <style>
+            table {
+                width: 50px;
+            }
+
+            @media screen and (max-width:649px) {
+                td {
+                    display: block;
+                    width: 100% !important;
+                }
+            }
+
+            @media screen and (min-width:650px) {
+                td {
+                    display: table-cell;
+                }
+            }
+        </style>
+        <!-- Outlook (native) -->
+        <!-- border="1" cellpadding="10" cellspacing="20" -->
+        <!--  [if mso]  ... schreiben was immer ich will ... <![endif] -->
+
+        <!-- Conditional comments (msie, mso)-->
+        <!-- <!-- [if mso]> -->
+        <table width="100%"
+            style="margin: 0 -1em; width: 100%; max-width: 768px; min-width: 480px; border: 1px dashed grey;">
+            <tr>
+                <td colspan="2" style="padding: 1em; border: 1px dashed grey;">
+                    <h2>Headline Lorem ipsum dolor sit amet.</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"> <img width="100%"
+                        src="https://picsum.photos/id/7/650/200" alt=""></td>
+            </tr>
+
+            <tr>
+                <td width="50%"
+                    style="padding: 1em; width: 50%; border: 1px dashed grey;">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Error
+                    accusantium eligendi in. Iure quas eveniet cumque
+                    dignissimos.
+                    Quisquam!</td>
+                <td width="50%"
+                    style="padding: 1em; width: 50%; border: 1px dashed grey;">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel
+                    veniam nulla quae?</td>
+            </tr>
+        </table>
+        <!-- <![endif] -->
+        <!-- /Outlook (native) -->
+    </div>
+</body>
+
+</html>
