@@ -108,6 +108,8 @@
             .kwsoft-flexbox-layout>* {
                 background-color: hsla(30, 80%, 50%, 0.85);
                 border: 1px dashed white;
+
+                padding: 0 1em;
             }
 
             .kwsoft-flexbox-layout>*:nth-child(1) {
@@ -116,16 +118,24 @@
                 flex-shrink: 1;
             }
 
-            .kwsoft-flexbox-layout>*:nth-child(2) {
-                flex-basis: 50%;
-                flex-grow: 1;
-                flex-shrink: 1;
+            @media screen and (max-width: 649px) {
+
+                .kwsoft-flexbox-layout>*:nth-child(2),
+                .kwsoft-flexbox-layout>*:nth-child(3) {
+                    flex-basis: 100%;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                }
             }
 
-            .kwsoft-flexbox-layout>*:nth-child(3) {
-                flex-basis: 50%;
-                flex-grow: 1;
-                flex-shrink: 1;
+            @media screen and (min-width: 650px) {
+
+                .kwsoft-flexbox-layout>*:nth-child(2),
+                .kwsoft-flexbox-layout>*:nth-child(3) {
+                    flex-basis: 50%;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                }
             }
 
             .kwsoft-flexbox-layout>*:nth-child(4),
@@ -145,12 +155,23 @@
             <div>one</div>
             <div>
                 <h2>Two</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Natus excepturi aut molestias veniam cumque. Minus,
+                    recusandae! Dolor, excepturi.</p>
             </div>
-            <div>three</div>
-            <div>four</div>
-            <div>five</div>
-            <div>six</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda, tenetur maxime ullam eligendi voluptatem harum nam
+                impedit, dolorem esse dolorum, iste veritatis tempora quas.
+            </div>
+
+            <div><img src="https://picsum.photos/id/5/120" alt=""
+                    class="kwsoft-img-responsive"></div>
+            <div><img src="https://picsum.photos/id/6/120" alt=""
+                    class="kwsoft-img-responsive">
+            </div>
+            <div><img src="https://picsum.photos/id/7/120" alt=""
+                    class="kwsoft-img-responsive">
+            </div>
             <div>seven</div>
             <div>eight</div>
             <div>nine</div>
