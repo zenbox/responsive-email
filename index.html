@@ -89,10 +89,42 @@
                 column-count: 1 !important;
             }
         </style>
+        <!-- Responsive layout via flexbox-->
+        <style>
+            /* Flex container */
+            .kwsoft-flexbox-layout {
+                background-color: hsla(270, 50%, 50%, 0.85);
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: baseline;
+                gap: 1em;
+            }
+
+            /* Flex items */
+            .kwsoft-flexbox-layout>* {
+                background-color: hsla(30, 80%, 50%, 0.85);
+                border: 1px dashed white;
+
+            }
+        </style>
+        <!-- Flex container -->
+        <div class="kwsoft-flexbox-layout">
+            <!-- All children are items -->
+            <div>one</div>
+            <div>
+                <h2>Two</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div>three</div>
+
+        </div>
 
 
+        <!-- Responsive layout multicolumn via column-count -->
         <!-- Don't use h1 for emails -->
-        <div class="kwsoft-teaser-box" style="display:block;">
+        <div class="kwsoft-teaser-box" style="display:none;">
             <h2>Hello World and a lot more words</h2>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
@@ -105,9 +137,21 @@
 
             <div class="kwsoft-one-column-only"
                 style="column-count: 1; margin: 0 -1em;">
-                <img width="650" height="200"
-                    src="https://picsum.photos/id/7/650/200" alt=""
-                    class="kwsoft-img-responsive">
+
+                <picture>
+                    <source media="(min-width:800px)"
+                        srcset="https://picsum.photos/id/7/800/200">
+                    <source media="(min-width:650px)"
+                        srcset="https://picsum.photos/id/6/650/200">
+                    <source media="(max-width:480px)"
+                        srcset="https://picsum.photos/id/5/480/200">
+
+                    <img width="650" height="200"
+                        src="https://picsum.photos/id/4/480/200" alt=""
+                        class="kwsoft-img-responsive">
+                </picture>
+
+
             </div>
 
             <div>
@@ -146,7 +190,7 @@
         <!--  [if mso]  ... schreiben was immer ich will ... <![endif] -->
 
         <!-- Conditional comments (msie, mso)-->
-        <!-- <!-- [if mso]> -->
+        <!--  [if mso]>
         <table width="100%"
             style="margin: 0 -1em; width: 100%; max-width: 768px; min-width: 480px; border: 1px dashed grey;">
             <tr>
@@ -160,15 +204,15 @@
                         src="https://picsum.photos/id/7/650/200" alt=""></td>
             </tr>
 
-            <tr>
-                <td width="50%"
+            <tr valign="top">
+                <td width="50%" 
                     style="padding: 1em; width: 50%; border: 1px dashed grey;">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Error
                     accusantium eligendi in. Iure quas eveniet cumque
                     dignissimos.
                     Quisquam!</td>
-                <td width="50%"
+                <td width="50%" 
                     style="padding: 1em; width: 50%; border: 1px dashed grey;">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Vel
